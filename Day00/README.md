@@ -7,38 +7,38 @@
 
 -    DEPLOY AN EC2 ISNTANCE IN AWS USE UBUNTU 20
 
--    apt update && apt install -y nginx
+-    sudo apt update && sudo apt install -y nginx
 
 -    sudo apt update && sudo apt install certbot python3-certbot-nginx
 
--    sudo mkdir -p /var/www/pinapathrunisaikiran.co.in/html
+-    sudo mkdir -p /var/www/barathdevops.shop/html
 
--    sudo chown -R $USER:$USER /var/www/pinapathrunisaikiran.co.in/html
+-    sudo chown -R $USER:$USER /var/www/barathdevops.shop/html
 
--    sudo chmod -R 755 /var/www/pinapathrunisaikiran.co.in
+-    sudo chmod -R 755 /var/www/barathdevops.shop
 
--    nano /var/www/pinapathrunisaikiran.co.in/html/index.html
+-    nano /var/www/barathdevops.shop/html/index.html
 
 <html>
     <head>
-        <title>Welcome to pinapathrunisaikiran.co.in!</title>
+        <title>Welcome to barathdevops.shop!</title>
     </head>
     <body>
-        <h1>Success! The pinapathrunisaikiran.co.in server block is working!</h1>
+        <h1>Success! The barathdevops.shop server block is working!</h1>
     </body>
 </html>
 
 
--    sudo nano /etc/nginx/sites-available/pinapathrunisaikiran.co.in
+-    sudo nano /etc/nginx/sites-available/barathdevops.shop
 
 server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/pinapathrunisaikiran.co.in/html;
+        root /var/www/barathdevops.shop/html;
         index index.html index.htm index.nginx-debian.html;
 
-        server_name pinapathrunisaikiran.co.in www.pinapathrunisaikiran.co.in;
+        server_name barathdevops.shop www.barathdevops.shop;
 
         location / {
                 try_files $uri $uri/ =404;
@@ -46,7 +46,7 @@ server {
 }
 
 
--    sudo ln -s /etc/nginx/sites-available/pinapathrunisaikiran.co.in /etc/nginx/sites-enabled/
+-    sudo ln -s /etc/nginx/sites-available/barathdevops.shop /etc/nginx/sites-enabled/
 
 -    sudo nginx -t
 
@@ -54,10 +54,10 @@ server {
 
 sudo certbot certonly \
   --agree-tos \
-  --email pinapathruni.saikiran@gmail.com \
+  --email baraththangapandian27@gmail.com \
   --manual \
   --preferred-challenges=dns \
-  -d *.pinapathrunisaikiran.co.in \
+  -d *.barathdevops.shop \
   --server https://acme-v02.api.letsencrypt.org/directory
   
  
