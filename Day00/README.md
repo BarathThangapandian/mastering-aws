@@ -65,3 +65,9 @@ sudo certbot certonly \
 FOR HTTP TO HTTPS FORWARDING RUN THE BELOW COMMAND.
  
  certbot --nginx
+
+cd /var/www/barathdevops.shop/html
+
+sudo apt install git
+
+git clone https://github.com/BarathThangapandian/Portfolio-raw-files.git
